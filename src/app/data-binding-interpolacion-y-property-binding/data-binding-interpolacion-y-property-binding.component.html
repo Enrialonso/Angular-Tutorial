@@ -1,59 +1,51 @@
-  <br>
-  <div class="container-fluid">
-      <div class="row">
-
-        <div class="col-sm-1"></div>
-
-        <div class="col-sm-5">
-            <div class="card">
-                <h3 class="card-header">Interpolacion</h3>
-                <div class="card-body">
-                  <h5 class="card-title">Iterpolacion Binding</h5>
-                  <p class="card-text">La interpolación, también denominada String Interpolation, consiste en incluir
-                    dentro del código html y entre dobles llaves, una expresión que Angula
-                    evalúa para mostrar en la plantilla.</p><br>
-                    <h4 style="text-align: center;"> <code> {{ textoInterpolacion }} </code></h4><br>
-                    <p>Dentro de la clase que maneja este componente hemos insertado un modelo de datos que
-                      representa un objeto llamado "objeto" y en sus propiedades hemos definido algunas propiedades.
-                    </p><br>
-                    <h4 style="text-align: center;"> <code> {{ textoIntepolacionObjeto }} </code></h4>
-                    <br>
-                    <p>Valor de propiedad 1: {{ Objeto1.propiedad1 }}</p>
-                    <p>Valor de propiedad 2: {{ Objeto1.propiedad2 }}</p>
-                    <p>Valor de propiedad 3: {{ Objeto1.propiedad3 }}</p>
-                    <p>Valor de propiedad 4: {{ Objeto1.propiedad4 }}</p>
-                    <button type="button" class="btn btn-outline-primary centrado" (click)="cambioPropiedadesInterpolacion()">Cambiar Propiedades de Objeto</button>
-                    <hr>
-                </div>
-              </div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <h3 class="card-header">Interpolacion</h3>
+        <div class="card-body">
+          <h5 class="card-title">Iterpolacion Binding</h5>
+          <p class="card-text">La interpolación, también denominada String Interpolation, consiste en incluir
+            dentro del código html y entre dobles llaves, una expresión que Angula
+          evalúa para mostrar en la plantilla.</p><br>
+          <h4 style="text-align: center;"> <code> {{ textoInterpolacion }} </code></h4><br>
+          <p>Dentro de la clase que maneja este componente hemos insertado un modelo de datos que
+            representa un objeto llamado "objeto" y en sus propiedades hemos definido algunas propiedades.
+          </p><br>
+          <h4 style="text-align: center;"> <code> {{ textoIntepolacionObjeto }} </code></h4>
+          <br>
+          <h5 style="text-align: center;"> <strong> <p> Valor de propiedad 1: <code>{{ Objeto1.propiedad1 }}</code> </p> </strong></h5>
+          <h5 style="text-align: center;"> <strong> <p> Valor de propiedad 2: <code>{{ Objeto1.propiedad2 }}</code> </p> </strong></h5>
+          <h5 style="text-align: center;"> <strong> <p> Valor de propiedad 3: <code>{{ Objeto1.propiedad3 }}</code> </p> </strong></h5>
+          <h5 style="text-align: center;"> <strong> <p> Valor de propiedad 4: <code>{{ Objeto1.propiedad4 }}</code> </p> </strong></h5>
+          <button type="button" class="btn btn-outline-primary centrado" (click)="cambioPropiedadesInterpolacion()">Cambiar Propiedades de Objeto</button>
+          <hr>
         </div>
-        <div class="col-sm-5">
-  
-            <div class="card">
-                <h3 class="card-header">Property Binding</h3>
-                <div class="card-body">
-                  <h5 class="card-title">Property Binding</h5>
-                  <p class="card-text">Property Binding es el segundo tipo de data binding empleados por Angular
-                    para enlazar valores de la fuente de datos a la vista.
-                    En este caso, se trata de un enlace que relaciona un atributo con una expresión,
-                    con la siguiente sintaxis:</p><br>
-                    <h4 style="text-align: center;"> <code> {{ textoProperty }} </code></h4>
-                    <br>
-                    <p >Un ejemplo claro de esto podemos apreciarlo a continuacion:</p>
-                    <h4 style="text-align: center;"><Span  [hidden]="propertyChanger" >Texto de ejemplo</Span></h4>
-                    <br>
-                    <button type="button" class="btn btn-outline-primary centrado" (click)="cambioPropiedadesProperty()">Cambiar Atributos</button>
-                    <br>
-                    <p>Como podemos apreciar ada ves que hacemos click en el boton podemos cambiar el atributo <kbd>hidden</kbd> del texto. asi mismo podemos cambiar
-                    los atibutos que quisieramos en nuestras etiquetas html como: <kbd>src</kbd>, <kbd>hrfe</kbd>, <kbd>alt</kbd>, <kbd>disabled</kbd>... </p>
-                    <hr>
-                </div>
-              </div>
-        </div>
-
-        <div class="col-sm-1"></div>
-
       </div>
     </div>
-    
-
+    <div class="col-sm-6">
+      
+      <div class="card">
+        <h3 class="card-header">Property Binding</h3>
+        <div class="card-body">
+          <h5 class="card-title">Property Binding</h5>
+          <p class="card-text">Property Binding es el segundo tipo de data binding empleados por Angular
+            para enlazar valores de la fuente de datos a la vista.
+            En este caso, se trata de un enlace que relaciona un atributo con una expresión,
+          con la siguiente sintaxis:</p><br>
+          <h4 style="text-align: center;"> <code> {{ textoProperty }} </code></h4>
+          <br>
+          <p >Un ejemplo claro de esto podemos apreciarlo a continuacion:</p>
+          <h4 style="text-align: center;"><Span  [hidden]="propertyChanger" >Texto de ejemplo</Span></h4>
+          <br>
+          <button type="button" class="btn btn-outline-primary centrado" (click)="cambioPropiedadesProperty()">Cambiar Atributos</button>
+          <br>
+          <p>Como podemos apreciar ada ves que hacemos click en el boton podemos cambiar el atributo <kbd>hidden</kbd> del texto. asi mismo podemos cambiar
+          los atibutos que quisieramos en nuestras etiquetas html como: <kbd>src</kbd>, <kbd>hrfe</kbd>, <kbd>alt</kbd>, <kbd>disabled</kbd>... </p>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

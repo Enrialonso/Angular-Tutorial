@@ -1,0 +1,6 @@
+.divImagen {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}

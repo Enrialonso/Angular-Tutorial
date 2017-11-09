@@ -1,0 +1,36 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <h3 class="card-header">Two Way Binding - Concepto</h3>
+        <div class="card-body">
+          <h5 class="card-title">Two Way Binding</h5>
+          <p class="card-text">Este binding enlazan en ambos sentidos y simultáneamente, los datos de la vista a la fuente de datos y 
+            viceversa. Este enlace emplea una mezcla entre la sintaxis de eventos y la de interpolación conocida como banana in a box,
+             y enlaza el valor del elemento HTML de la vista con la propiedad del componente, de la siguiente manera.</p>
+          <div class="container">
+            <div class="divImagen"><img style="margin: 0 auto;" class="img-rounded img-responsive" src="../assets/img/two-way-binding.png" width="500"></div>
+          </div>
+          <h3 class="card-title" style="text-align: center;"><code>{{ textoTwoWayBinding }}</code></h3>
+          <p>Normalmente dependen de las directivas las cuales tienen un apartado especial en este tutorial. A continuacion podemos 
+            apreciar un ejemplo de este tipo de binding:</p>
+          <div class="container">
+            <div class="form-group">
+              <label class="col-form-label col-form-label-lg" for="inputLarge">Escribe en el text field:</label> 
+              <input [(ngModel)]="textoTextInputTwoWayBinding" class="form-control form-control-lg" id="inputLarge" type="text">
+              <hr>
+              <h3>{{ textoTextInputTwoWayBinding }}</h3>
+            </div>
+          </div>
+          <hr>
+          <p>Para que tengas una idea mas visual de lo que esta sucediento te dejo esta imagen:</p>
+          <div class="container">
+            <div class="divImagen"><img style="margin: 0 auto;" class="img-rounded img-responsive" src="../assets/img/two-way-binding2.png" width="700"></div>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br>

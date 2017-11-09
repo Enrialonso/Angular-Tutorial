@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="jumbotron">
+    <h2>Directivas - Angular</h2>
+    <h5><p>Las directivas son clases Angular con instrucciones para crear, formatear e
+      interaccionar con los elementos HTML en el DOM, y son una de las principales
+    características de este framework.</p>
+    <p>Se declaran mediante el empleo del decorador @Directive, y Angular incluye un
+      gran número de ellas para la mayor parte de las funcionalidades que se
+    necesitan en una aplicación.</p></h5>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <h4 class="card-header">Directiva - Componente</h4>
+        <div class="card-body">
+          <p class="card-text">Se trata de la aplicación en Angular de la tecnología web
+            component y ya conocemos uno de sus empleos, las etiquetas HTML de
+            cada componente que renderizan su plantilla donde las ubiquemos. Se
+            podría decir que el decorador @Component es una aplicación de las
+          directivas.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <h4 class="card-header">Directiva - Atributos</h4>
+        <div class="card-body">
+          <p class="card-text">Son directivas que modifican el comportamiento de un
+            elemento HTML de la misma manera que un atributo HTML, es decir, sin
+            modificar el layout o presentación del elemento en el DOM.
+          </p>
+          <div style="text-align: center;">
+            <a routerLink="/directiva-atributo" class="btn btn-outline-success">ngModel</a>
+            <a routerLink="/directiva-atributo" class="btn btn-outline-success">ngClass</a>
+            <a routerLink="/directiva-atributo" class="btn btn-outline-success">ngStyle</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <h4 class="card-header">Directivas - Estructurales</h4>
+        <div class="card-body">
+          <p class="card-text">Estas directivas alteran el layout del elemento en el que se
+            asocian, añadiendo, eliminando o reemplazando elementos en el DOM.
+            Se identifican sobre las directivas de atributo por ir precedidas del
+          símbolo asterisco (*).</p>
+          <div style="text-align: center;">
+            <a routerLink="/two-way-binding" class="btn btn-outline-success">*ngIf</a>
+            <a routerLink="/two-way-binding" class="btn btn-outline-success">*ngFor</a>
+            <a routerLink="/two-way-binding" class="btn btn-outline-success">*ngSwitch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
