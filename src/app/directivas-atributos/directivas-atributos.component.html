@@ -6,15 +6,36 @@
         <h3 class="card-header">Directiva - NgModel</h3>
         <div class="card-body">
           <h5 class="card-title">Directiva - NgModel</h5>
-          <p class="card-text"></p>
-          <h4 style="text-align: center;"> <code> {{ textoInterpolacion }} </code></h4>
-          <p></p>
-          <h4 style="text-align: center;"> <code> {{ textoIntepolacionObjeto }} </code></h4>
-
+          <p class="card-text">Esta directiva enlasa los elementos de entrada (input, radio buttons, check buttons...) de un formulario creando
+            una instancia de la clase FormControl, en donde ngModel rastreará el valor, la interacción del usuario
+            y el estado de validación del control y mantendrá la vista sincronizada con el modelo. Para activar esta directiva usamos lo que se
+          llama una estructura banana con corchetes anidados con parentesis como se puede apreciar a continuacion. </p>
+          <h3 style="text-align: center;">
+          <code> {{ textoDirectivaNgModel }} </code>
+          </h3>
+          <p>Esta directiva cuenta con propiedades las cuales podemos usar para tener un control mas amplio de nuestros formularios. interactua con el siguiente ejemplo:</p>
+          
+          <div class="container">
+            <dir class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+              
+              <div class="form-group">
+                <label class="col-form-label col-form-label-lg" for="inputLarge">Escribe en el Text Field:</label>
+                <input [(ngModel)]="TextoFormularioNgModel" #ctrl="ngModel" class="form-control form-control-lg" type="text" id="inputLarge" required>
+              </div>
+              <h5><p>Value: {{ TextoFormularioNgModel }} <br> Valid: {{ ctrl.valid }} <br> Invalid: {{ ctrl.invalid }}</p></h5>
+              <p>Valid: {{ ctrl.valid }}</p>
+              <p>Valid: {{ ctrl.invalid }}</p>
+              
+              <button (click)="setValue()" class="btn btn-outline-success" >Click</button>
+            </div>
+            <div class="col-sm-2"></div>
+            </dir>
+          </div>
           <hr>
         </div>
       </div>
     </div>
-    
   </div>
 </div>

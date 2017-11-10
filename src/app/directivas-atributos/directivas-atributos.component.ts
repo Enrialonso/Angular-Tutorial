@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivasAtributosComponent implements OnInit {
 
+  textoDirectivaNgModel = '[(ngModel)]'
+
+  TextoFormularioNgModel: string = '';
+  
+   
+
   constructor() { }
+
+  setValue() { this.TextoFormularioNgModel = 'Ejemplo'; }
 
   ngOnInit() {
   }
