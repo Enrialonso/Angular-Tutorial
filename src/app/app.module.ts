@@ -11,7 +11,8 @@ import { DataBindingInterpolacionYPropertyBindingComponent } from './data-bindin
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { InicioDirectivasComponent } from './inicio-directivas/inicio-directivas.component';
-import { DirectivasAtributosComponent } from './directivas-atributos/directivas-atributos.component'
+import { DirectivasAtributosComponent } from './directivas-atributos/directivas-atributos.component';
+import { DirectivaAtributoNgclassComponent } from './directiva-atributo-ngclass/directiva-atributo-ngclass.component'
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'data-binding', component: InicioDataBindingComponent  },
   { path: 'directivas', component: InicioDirectivasComponent  },
   { path: 'directiva-atributo', component: DirectivasAtributosComponent  },
+  { path: 'directiva-atributo-ngclass', component: DirectivaAtributoNgclassComponent  },
   { path: '**', component: Error404Component}
   ]
 
@@ -35,7 +37,8 @@ const routes: Routes = [
     EventBindingComponent,
     TwoWayBindingComponent,
     InicioDirectivasComponent,
-    DirectivasAtributosComponent
+    DirectivasAtributosComponent,
+    DirectivaAtributoNgclassComponent
   ],
   imports: [
     BrowserModule,
