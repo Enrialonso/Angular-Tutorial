@@ -12,7 +12,9 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { InicioDirectivasComponent } from './inicio-directivas/inicio-directivas.component';
 import { DirectivasAtributosComponent } from './directivas-atributos/directivas-atributos.component';
-import { DirectivaAtributoNgclassComponent } from './directiva-atributo-ngclass/directiva-atributo-ngclass.component'
+import { DirectivaAtributoNgclassComponent } from './directiva-atributo-ngclass/directiva-atributo-ngclass.component';
+import { DirectivaAtributosNgstyleComponent } from './directiva-atributos-ngstyle/directiva-atributos-ngstyle.component';
+import { FooterComponent } from './footer/footer.component'
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -23,6 +25,7 @@ const routes: Routes = [
   { path: 'directivas', component: InicioDirectivasComponent  },
   { path: 'directiva-atributo', component: DirectivasAtributosComponent  },
   { path: 'directiva-atributo-ngclass', component: DirectivaAtributoNgclassComponent  },
+  { path: 'directiva-atributo-ngstyle', component: DirectivaAtributosNgstyleComponent  },
   { path: '**', component: Error404Component}
   ]
 
@@ -38,7 +41,9 @@ const routes: Routes = [
     TwoWayBindingComponent,
     InicioDirectivasComponent,
     DirectivasAtributosComponent,
-    DirectivaAtributoNgclassComponent
+    DirectivaAtributoNgclassComponent,
+    DirectivaAtributosNgstyleComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

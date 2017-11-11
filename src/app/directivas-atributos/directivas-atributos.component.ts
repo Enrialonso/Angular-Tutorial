@@ -10,8 +10,7 @@ export class DirectivasAtributosComponent implements OnInit {
   textoDirectivaNgModel = '[(ngModel)]'
 
   TextoFormularioNgModel: string = '';
-  
-3   
+   
   constructor() { }
 
   setValue() { this.TextoFormularioNgModel = 'Ejemplo'; }

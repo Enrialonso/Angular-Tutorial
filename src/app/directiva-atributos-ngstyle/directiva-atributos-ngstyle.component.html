@@ -3,31 +3,31 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="card">
-        <h3 class="card-header">Directiva - NgClass</h3>
+        <h3 class="card-header">Directiva - NgStyle</h3>
         <div class="card-body">
           <h5 class="card-title">Directiva - NgClass</h5>
-          <p class="card-text">Agrega y elimina clases CSS en un elemento HTML. segun la logica de 
+          <p class="card-text">Agrega y elimina atributos CSS en un elemento HTML. segun la logica de 
             programacion que tengamos del lado interno de nuestro componente podemos hacer que un 
-            elemento html cambie su css para ilustrale al usuario de alguna manera el dinamismo 
+            elemento html cambie su CSS para ilustrale al usuario de alguna manera el dinamismo 
             de la pagina. A continuacion mostramos como es la sintaxis de esta directiva</p>
           <h3 style="text-align: center;">
-          <code> {{ textoDirectivaNgClass }} </code>
+          <code> {{ textoDirectivaNgstyle }} </code>
           </h3>
           <hr>
           <div class="container">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="card">
-                      <h4 class="card-header">NgClass - tipo Texto</h4>
+                      <h4 class="card-header">NgStyle - tipo Texto</h4>
                       <div class="card-body">
                           <h5 class="card-title"><small class="text-muted">
                             Pasa el mouse sobre el elemento:</small></h5>
                         <h5 (mouseenter)="eventBindingMouseEntrer1()" (mouseout)="eventBindingMouseOut1()" 
-                        [ngClass]="varNgClassElemento1" style="text-align: center;">Elemento HTML</h5>
+                        [ngStyle]="{'font-style': varNgStyleElemento1}" style="text-align: center;">Elemento HTML</h5>
                         <small>Activamos esta directiva con la ayuda de los event Binding en el mouse para 
-                          cambiar la clase de CSS aplicada al elemento, cuando el mouse esta sobre el
-                          elemento asignamos "text-muted" a la clase y observamos como el texto pasa a estar
-                          mas opaco, cuando quitamos el mouse del elemento vuelve a la normalidad.
+                          cambiar el estilo de CSS aplicado al elemento, cuando el mouse esta sobre el
+                          elemento asignamos "font-style: italic" a la clase y observamos como el texto cambia
+                           su formato, cuando quitamos el mouse del elemento vuelve a la normalidad.
                         </small>
                       </div>
                     </div>
@@ -35,15 +35,15 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="card">
-                      <h4 class="card-header">NgClass - Color texto</h4>
+                      <h4 class="card-header">NgStyle - Color texto</h4>
                       <div class="card-body">
                         <h5 class="card-title"><small class="text-muted">
                             Pasa el mouse sobre el elemento:</small></h5>
                         <h5 (mouseenter)="eventBindingMouseEntrer2()" (mouseout)="eventBindingMouseOut2()" 
-                        [ngClass]="varNgClassElemento2" style="text-align: center;">Elemento HTML</h5>
+                        [ngStyle]="{'color': varNgStyleElemento2}" style="text-align: center;">Elemento HTML</h5>
                         <small>Activamos esta directiva con la ayuda de los event Binding en el mouse para 
-                          cambiar la clase de CSS aplicada al elemento, cuando el mouse esta sobre el
-                          elemento asignamos "text-danger" a la clase y observamos como el texto cambia de color
+                          cambiar el estilo de CSS aplicado al elemento, cuando el mouse esta sobre el
+                          elemento asignamos "color: Tomato" a la clase y observamos como el texto cambia de color
                           y cuando retiramos el mouse vuelve a la normalidad.
                         </small>
                       </div>
@@ -52,17 +52,16 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="card">
-                        <h4 class="card-header">NgClass - Tipo Texto</h4>
+                        <h4 class="card-header">NgStyle - Fondo Texto</h4>
                         <div class="card-body">
                           <h5 class="card-title"><small class="text-muted">
                               Pasa el mouse sobre el elemento:</small></h5>
                           <h5 (mouseenter)="eventBindingMouseEntrer3()" (mouseout)="eventBindingMouseOut3()" 
-                          [ngClass]="varNgClassElemento3" style="text-align: center;">Elemento HTML</h5>
+                          [ngStyle]="{'background-color': varNgStyleElemento3}" style="text-align: center;">Elemento HTML</h5>
                           <small>Activamos esta directiva con la ayuda de los event Binding en el mouse para 
-                            cambiar la clase de CSS aplicada al elemento, cuando el mouse esta sobre el
-                            elemento asignamos "text-uppercase" a la clase y observamos como el texto su 
-                            forma y pasa a estar completamente en mayusculas y cuando retiramos el mouse 
-                            vuelve a la normalidad.
+                            cambiar el estilo de CSS aplicado al elemento, cuando el mouse esta sobre el
+                            elemento asignamos "background-color: DodgerBlue" a la clase y observamos como el fondo
+                             del texto cambia de color y cuando retiramos el mouse vuelve a la normalidad.
                           </small>
                         </div>
                       </div>
