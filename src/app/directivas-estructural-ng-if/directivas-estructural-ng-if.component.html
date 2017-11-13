@@ -1,0 +1,96 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <h3 class="card-header">Directiva - NgIF</h3>
+        <div class="card-body">
+          <h5 class="card-title">Directiva - NgIF</h5>
+          <p class="card-text">La directiva NgIf es una directiva estructural de Angular para implementar estructuras if en
+            nuestra aplicació <br> <br>
+            Con esta directiva condicionamos que un elemento html se muestre o no en
+            función de que se cumpla la expresión que define, normalmente una propiedad
+            o método. Su sintaxis básica es.</p>
+          <h3 style="text-align: center;">
+          <code> {{ textoDirectivaNgIF }} </code>
+          </h3>
+          <hr>
+          <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                      <h4 class="card-header">NgIF - Simple</h4>
+                      <div class="card-body">
+                          <h5 class="card-title"><small class="text-muted">
+                            Escribe sobre el testField:</small></h5>
+                        
+                            <div class="form-group">
+                              <input [(ngModel)]="TextoFormularioNgIF" #ctrl="ngModel" type="text" 
+                              class="form-control" id="inputDefault" required>
+                            </div>
+
+                            <h4><small *ngIf="ctrl.valid">Formulario Valido!!!</small></h4>
+
+                        <small>Mientras el campo de texto este vacío permanece invalido, pero cuando comenzamos a escribir el
+                          pasa a ser valido y mostramos el mensaje debajo del mismo. nos ayudamos con la etiqueta NgModel para 
+                          capturar si el formulario es valido o no mediante la propiedad .valid, en el html de text field debemos
+                          colocar que el campo es requerido.
+                        </small>
+                      </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                      <h4 class="card-header">NgIF - If - Else</h4>
+                      <div class="card-body">
+                        <h5 class="card-title"><small class="text-muted">
+                            Escribe Angular sobre testField:</small></h5>
+                        
+                            <div class="form-group">
+                              <input [(ngModel)]="TextoFormularioNgIF2" type="text" 
+                              class="form-control" id="inputDefault" required>
+                            </div>
+
+                            <p *ngIf="!TextoFormularioNgIF2; else correcto">Complete el Campo</p>
+                              <ng-template #correcto>
+                              <p *ngIf="setResultado(); else incorrecto">¡Correcto!</p>
+                              </ng-template>
+                              <ng-template #incorrecto>
+                              <p>Escribiste Angular?</p>
+                            </ng-template>
+
+                        <small>Mientras el campo de texto este vacío permanece invalido, pero cuando comenzamos a escribir
+                          pasa a ser valido, pero hasta que el usuario no escriba la palabra correcta no mostramos el mensaje de Correcto!. 
+                          esto es un claro ejemplo del uso de metodos del componente aplicado a los NgIF.
+                        </small>
+                      </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <h4 class="card-header">NgIF - Fondo Texto</h4>
+                        <div class="card-body">
+                          <h5 class="card-title"><small class="text-muted">
+                              Pasa el mouse sobre el elemento:</small></h5>
+                          <h5 (mouseenter)="eventBindingMouseEntrer3()" (mouseout)="eventBindingMouseOut3()" 
+                          [ngStyle]="{'background-color': varNgStyleElemento3}" style="text-align: center;">Elemento HTML</h5>
+                          <small>Activamos esta directiva con la ayuda de los event Binding en el mouse para 
+                            cambiar el estilo de CSS aplicado al elemento, cuando el mouse esta sobre el
+                            elemento asignamos "background-color: DodgerBlue" a la clase y observamos como el fondo
+                             del texto cambia de color y cuando retiramos el mouse vuelve a la normalidad.
+                          </small>
+                        </div>
+                      </div>
+
+                </div>
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

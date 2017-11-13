@@ -11,7 +11,7 @@ import { Component, OnInit, ViewEncapsulation, HostListener, ElementRef, Directi
 
 export class DirectivaAtributoNgclassComponent implements OnInit {
 
-  textoDirectivaNgClass = '[ngClass]'
+  textoDirectivaNgClass = '[ngClass]="Clases CSS"'
 
   varNgClassElemento1 = 'card-title'
 

@@ -10,7 +10,7 @@ export class DirectivaAtributosNgstyleComponent implements OnInit {
 
   //style="font-style: italic; text-align: center;"
 
-  textoDirectivaNgstyle = '[ngStyle]'
+  textoDirectivaNgstyle = '[ngStyle]="Atributos CSS"'
 
   varNgStyleElemento1 = ''
 

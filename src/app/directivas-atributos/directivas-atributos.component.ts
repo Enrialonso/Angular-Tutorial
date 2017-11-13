@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivasAtributosComponent implements OnInit {
 
-  textoDirectivaNgModel = '[(ngModel)]'
+  textoDirectivaNgModel = '[(ngModel)]="Variable"'
 
   TextoFormularioNgModel: string = '';
    
