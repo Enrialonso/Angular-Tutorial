@@ -3,18 +3,40 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="card">
-        <h3 class="card-header">Directiva - NgIF</h3>
+        <h3 class="card-header">Directiva - NgFor</h3>
         <div class="card-body">
-          <h5 class="card-title">Directiva - NgIF</h5>
-          <p class="card-text">La directiva NgIf es una directiva estructural de Angular para implementar estructuras if en
-            nuestra aplicació <br> <br>
-            Con esta directiva condicionamos que un elemento html se muestre o no en
-            función de que se cumpla la expresión que define, normalmente una propiedad
-            o método. Su sintaxis básica es.</p>
+          <h5 class="card-title">Directiva - NgFor</h5>
+          <p class="card-text">Una de las directivas más empleadas en las aplicaciones Angular es la ngFor,
+              dedicada a realizar iteraciones y presentar listados por pantalla. Se trata de una
+              directiva de tipo estructural y su sintaxis es:
+              <br><br>
+              En esta sintaxis, se crea dentro del elemento html una variable local con let que
+              recorrerá el array definido por of y proveniente del componente. Como buena
+              práctica, el nombre de la variable local será singular y el del array plural.</p>
           <h3 style="text-align: center;">
-          <code> {{ textoDirectivaNgIF }} </code>
+          <code> {{ textoDirectivaNgFor }} </code>
           </h3>
           <hr>
+          <h5 class="card-title">Variables locales - NgFor</h5>
+          <p class="card-text">Esta directiva tiene distintas variables locales que son vastante utiles
+            para poder facilitar el manejo y construccion de la estructura que queremos realizar 
+            con la directiva. son variables que funcionan de forma local dentro de bucle y las podemos utilizar
+            para no depender de declaraciones externas del control del bucle.
+            <br></p>
+            <ul>
+              <li><code>Index: Number</code> guarda el numero actual del ciclo que se esta ejecutando.</li>
+              <li><code>Frist: Boolean</code> es verdadero si es el primer ciclo del bucle.</li>
+              <li><code>Last: Boolean</code> es verdadero si es el ultimo ciclo del bucle.</li>
+              <li><code>Even: Boolean</code>es verdadero si numero de ciclo es un numero par.</li>
+              <li><code>Odd: Boolean</code> es verdadero si numero de ciclo es un numero impar.</li>
+            </ul>
+            <p>Normalmente esta directiva es muy util para poder estructurar tablas, 
+              paneles de informacion o snips de html con informacion variada en formato de objeto. 
+              Para los ejemplos posteriores vamos a utilizar un objeto con la siguiente estructura: </p>
+              <pre> Objeto: "Tienda"
+                Tienda = [ { Producto(Libro), Precio: 200, } ]
+              </pre>
+              <hr>
           <div class="container">
             <div class="row">
                 <div class="col-sm-4">
@@ -117,4 +139,3 @@
     </div>
   </div>
 </div>
-

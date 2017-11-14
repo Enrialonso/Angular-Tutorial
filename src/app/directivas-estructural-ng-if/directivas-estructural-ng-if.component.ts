@@ -8,7 +8,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class DirectivasEstructuralNgIfComponent implements OnInit {
 
-  textoDirectivaNgIF = '*ngIf=”expresión/propiedad/metodo”'
+  textoDirectivaNgIF = '*ngIf="expresión/propiedad/metodo"'
 
   TextoFormularioNgIF = ''
 

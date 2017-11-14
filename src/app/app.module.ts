@@ -15,7 +15,8 @@ import { DirectivasAtributosComponent } from './directivas-atributos/directivas-
 import { DirectivaAtributoNgclassComponent } from './directiva-atributo-ngclass/directiva-atributo-ngclass.component';
 import { DirectivaAtributosNgstyleComponent } from './directiva-atributos-ngstyle/directiva-atributos-ngstyle.component';
 import { FooterComponent } from './footer/footer.component';
-import { DirectivasEstructuralNgIfComponent } from './directivas-estructural-ng-if/directivas-estructural-ng-if.component'
+import { DirectivasEstructuralNgIfComponent } from './directivas-estructural-ng-if/directivas-estructural-ng-if.component';
+import { DirectivaEstructuraNgForComponent } from './directiva-estructura-ng-for/directiva-estructura-ng-for.component'
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'directiva-atributo-ngclass', component: DirectivaAtributoNgclassComponent  },
   { path: 'directiva-atributo-ngstyle', component: DirectivaAtributosNgstyleComponent  },
   { path: 'directivas-Estructural-ngif', component: DirectivasEstructuralNgIfComponent  },
+  { path: 'directivas-Estructural-ngfor', component: DirectivaEstructuraNgForComponent },
   { path: '**', component: Error404Component}
   ]
 
@@ -46,7 +48,8 @@ const routes: Routes = [
     DirectivaAtributoNgclassComponent,
     DirectivaAtributosNgstyleComponent,
     FooterComponent,
-    DirectivasEstructuralNgIfComponent
+    DirectivasEstructuralNgIfComponent,
+    DirectivaEstructuraNgForComponent
   ],
   imports: [
     BrowserModule,
