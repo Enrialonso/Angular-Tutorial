@@ -14,10 +14,14 @@ export class DirectivasEstructuralNgIfComponent implements OnInit {
 
   TextoFormularioNgIF2 = ''
 
+  selectFormularioNgIF: number = 0
+
   constructor() { }
 
   ngOnInit() { }
 
   setResultado(){ if(this.TextoFormularioNgIF2 == 'Angular'){ return true}}
+
+  selecNgIf() { return this.selectFormularioNgIF }
 
 }

@@ -73,9 +73,32 @@
                         <h4 class="card-header">NgIF - Fondo Texto</h4>
                         <div class="card-body">
                           <h5 class="card-title"><small class="text-muted">
-                              Pasa el mouse sobre el elemento:</small></h5>
-                          <h5 (mouseenter)="eventBindingMouseEntrer3()" (mouseout)="eventBindingMouseOut3()" 
-                          [ngStyle]="{'background-color': varNgStyleElemento3}" style="text-align: center;">Elemento HTML</h5>
+                              Selecciona un valor en el Select:</small></h5>
+                              <div class="form-group">
+                                <select  [(ngModel)]="selectFormularioNgIF" (change)="selecNgIf()" class="form-control" id="exampleSelect2">
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                  <option>6</option>
+                                  <option>7</option>
+                                  <option>8</option>
+                                  <option>9</option>
+                                  <option>10</option>
+                                </select>
+                              </div>
+                              <h5 *ngIf="selectFormularioNgIF == 0; else id_evaluacion" style="text-align: center;"></h5>
+                            <ng-template #id_evaluacion>
+                                <div *ngIf="selectFormularioNgIF >= 5; else reprobado" class="alert alert-dismissible alert-success">
+                                    <p style="text-align: center;" >Puntuacion: {{ selectFormularioNgIF }}</p>
+                                  </div>
+                            </ng-template>
+                            <ng-template #reprobado>
+                                <div class="alert alert-dismissible alert-danger">
+                                    <p style="text-align: center;" >Puntuacion: {{ selectFormularioNgIF }}</p>
+                                  </div>
+                            </ng-template>
                           <small>Activamos esta directiva con la ayuda de los event Binding en el mouse para 
                             cambiar el estilo de CSS aplicado al elemento, cuando el mouse esta sobre el
                             elemento asignamos "background-color: DodgerBlue" a la clase y observamos como el fondo
