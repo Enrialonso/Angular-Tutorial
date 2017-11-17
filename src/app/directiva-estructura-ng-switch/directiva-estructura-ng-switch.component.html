@@ -1,0 +1,142 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <h3 class="card-header">Directiva - NgSwitch</h3>
+        <div class="card-body">
+          <h5 class="card-title">Directiva - NgSwitch</h5>
+          <p class="card-text">Como en mucho lenguajes de programacion para evitar el anidamiento infinito
+            de sentencias "IF" existe la sentencia NgSwitch, la cual tiene como entrada una variable la 
+            cual sera evalueda reiteradamente segun los casos necesarios para la sentencia. dependiendo 
+            de la evaluacion renderizaremos una parte del HTML u otra, en caso de que no coincida con 
+            ninguna condicion tenemos una sentencia Default la cual renderiza el HTML cuando no hay 
+            ninguna coincidancia.
+            <br><br>
+            En esta sintaxis, se crea dentro del elemento html una variable local con let que
+            recorrerá el array definido por of y proveniente del componente. Como buena
+          práctica, el nombre de la variable local será singular y el del array plural.</p>
+          <h5 style="text-align: center;">
+
+          <code> {{ textoObjetoNgSwitch0 }} </code> <br>
+          <code> {{ textoObjetoNgSwitch1 }} </code> <br>
+          <code> {{ textoObjetoNgSwitch2 }} </code> <br>
+          <code> {{ textoObjetoNgSwitch3 }} </code> <br>
+          <code> {{ textoObjetoNgSwitch4 }} </code> <br>
+
+          </h5>
+       
+          <hr>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="card">
+                  <h4 class="card-header">NgSwitch - Listar Objeto</h4>
+                  <div class="card-body">
+                    <h5 class="card-title"><small class="text-muted">
+                    Items del Objeto Tienda:</small></h5>
+                    <ul> 
+                      <li *ngFor="let item of ObjetoNgSwitch" [ngSwitch]="true">
+                        <Strong *ngSwitchCase="item.precio > 65" style="color: red;">Item: {{item.item}}: {{ item.precio}} Eur</Strong>
+                        <Strong *ngSwitchCase="item.precio < 65">Item: {{item.item}}: {{ item.precio}} Eur</Strong>
+                      </li>
+                    </ul>
+                    <small>Como podemos apreciar lo que realizamos fue listar todos
+                    los valores de la clave item y precio del objeto tienda. En el NgSwitch programamos
+                    que si algun item era mayor de 65 Euros el color de la fuente cambiaria a rojo.
+                    </small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                  <div class="card">
+                      <h4 class="card-header">NgSwitch - Listar Objeto</h4>
+                      <div class="card-body">
+                        <h5 class="card-title"><small class="text-muted">
+                        Items del Objeto Tienda con cantidad por debajo de 15:</small></h5>
+
+                          <span *ngFor="let item of ObjetoNgSwitch" [ngSwitch]="true">
+                            <li *ngSwitchCase="item.cantidad < 15"><Strong >Item: {{item.item}}: {{ item.cantidad}} Uds</Strong></li>
+                          </span><br>
+
+                        <small>Como podemos apreciar lo que realizamos fue listar todos
+                        los valores de la clave item y cantidad del objeto tienda. En el NgSwitch programamos
+                        que si algun item era menor de 15 unidades ese elemento seria renderizado en el HTML 
+                        en caso contrario no seria mostrado, Recorremos todo el objeto pero solo se muestran 
+                        los que cumplen con la condicion.
+                        </small>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card">
+                  <h4 class="card-header">NgFor - Uso Odd y Even</h4>
+                  <div class="card-body">
+                    <h5 class="card-title"><small class="text-muted">
+                    Items del Objeto Tienda:</small></h5>
+                    <ul>
+                      <li *ngFor="let item of ObjetoNgFor; let evenFor = even; let i = index">
+                        <Strong *ngIf="evenFor; else NormalData" style="color: rgb(80, 199, 247);">{{ i + 1 }} - Item: {{item.item}} </Strong>
+                        <ng-template #NormalData>
+                        <Strong>{{ i + 1 }} - Item: {{item.item}}</Strong>
+                        </ng-template>
+                      </li>
+                    </ul>
+                    <small>Aqui tambien listamos el objeto Tienda pero diferenciando los objetos impares
+                    que estan en Azul para que se distingan de los pares.
+                    Aplicando las varibles locales even y odd de la directiva ngFor.
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="container">
+            
+            <div class="row">
+
+              <div class="col-sm-12">
+                
+                <div class="card">
+                  <h4 class="card-header">NgFor - Uso de Tablas</h4>
+                  <div class="card-body">
+                    <h5 class="card-title"><small class="text-muted">
+                    Items del Objeto Tienda:</small></h5>
+
+                    <table class="table table-striped table-hover table-condensed">
+                      <thead>
+                        <tr>
+                          <th>Item</th>
+                          <th>Marca</th>
+                          <th>Cantidad (Uds)</th>
+                          <th>Precio (Eur)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr *ngFor="let item of ObjetoNgFor">
+                          <td>{{ item.item }}</td>
+                          <td>{{ item.marca }}</td>
+                          <td>{{ item.cantidad }}</td>
+                          <td>{{ item.precio }}</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                    
+                    <small> En este ejemplo mostramos una tabla segun el formato del Objeto y 
+                      sus elementos internos, y segun tengamos la necesidad podemos multiplicar la dificultad.
+                      Por ejemplo cambiar el CSS de de cierto elemento si tiene cierto valor.  </small>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

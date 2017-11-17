@@ -34,29 +34,25 @@
             paneles de informacion o snips de html con informacion variada en formato de objeto.
           Para los ejemplos posteriores vamos a utilizar un objeto con la siguiente estructura: </p>
           
-            <div class="container">
-              
-                <div class="row">
-
-                    <div class="col-sm-3"></div>
-                    <div class="col-sm-7">
-                      
-                        <code>
-                            {{textoObjetoNgFor0}} <br> 
-                            {{textoObjetoNgFor1}} <br>
-                            {{textoObjetoNgFor2}} <br>
-                            {{textoObjetoNgFor3}} <br>
-                            {{textoObjetoNgFor4}} <br>
-                            {{textoObjetoNgFor5}} <br>
-                        </code>
-    
-                    </div>
-                    <div class="col-sm-2"></div>
-
-                </div>
-
+          <div class="container">
+            
+            <div class="row">
+              <div class="col-sm-3"></div>
+              <div class="col-sm-7">
+                
+                <code>
+                {{textoObjetoNgFor0}} <br>
+                {{textoObjetoNgFor1}} <br>
+                {{textoObjetoNgFor2}} <br>
+                {{textoObjetoNgFor3}} <br>
+                {{textoObjetoNgFor4}} <br>
+                {{textoObjetoNgFor5}} <br>
+                </code>
+                
+              </div>
+              <div class="col-sm-2"></div>
             </div>
-
+          </div>
           <hr>
           <div class="container">
             <div class="row">
@@ -79,7 +75,7 @@
               </div>
               <div class="col-sm-4">
                 <div class="card">
-                  <h4 class="card-header">NgIF - Uso First y last</h4>
+                  <h4 class="card-header">NgFor - Uso First y last</h4>
                   <div class="card-body">
                     <h5 class="card-title"><small class="text-muted">
                     Items del Objeto Tienda:</small></h5>
@@ -96,39 +92,81 @@
                       </li>
                     </ul>
                     <small>Aqui tambien listamos el objeto Tienda pero diferenciando el primer y el ultimo
-                      elemento que estan en Azul para que se distingan de los demas elementos.
-                      Aplicando las varibles locales de la directiva ngFor.
+                    elemento que estan en Azul para que se distingan de los demas elementos.
+                    Aplicando las varibles locales de la directiva ngFor.
                     </small>
                   </div>
                 </div>
               </div>
               <div class="col-sm-4">
                 <div class="card">
-                  <h4 class="card-header">NgIF - Uso Odd y Even</h4>
+                  <h4 class="card-header">NgFor - Uso Odd y Even</h4>
                   <div class="card-body">
-                      <h5 class="card-title"><small class="text-muted">
-                          Items del Objeto Tienda:</small></h5>
-                          <ul>
-                            <li *ngFor="let item of ObjetoNgFor; let evenFor = even; let i = index">
-                              <Strong *ngIf="evenFor; else NormalData" style="color: rgb(80, 199, 247);">{{ i + 1 }} - Item: {{item.item}} </Strong>
-                              <ng-template #NormalData>
-                              <Strong>{{ i + 1 }} - Item: {{item.item}}</Strong>
-                              </ng-template>
-                            </li>
-                          </ul>
-                          <small>Aqui tambien listamos el objeto Tienda pero diferenciando los objetos impares
-                             que estan en Azul para que se distingan de los pares.
-                            Aplicando las varibles locales even y odd de la directiva ngFor.
-                          </small>
+                    <h5 class="card-title"><small class="text-muted">
+                    Items del Objeto Tienda:</small></h5>
+                    <ul>
+                      <li *ngFor="let item of ObjetoNgFor; let evenFor = even; let i = index">
+                        <Strong *ngIf="evenFor; else NormalData" style="color: rgb(80, 199, 247);">{{ i + 1 }} - Item: {{item.item}} </Strong>
+                        <ng-template #NormalData>
+                        <Strong>{{ i + 1 }} - Item: {{item.item}}</Strong>
+                        </ng-template>
+                      </li>
+                    </ul>
+                    <small>Aqui tambien listamos el objeto Tienda pero diferenciando los objetos impares
+                    que estan en Azul para que se distingan de los pares.
+                    Aplicando las varibles locales even y odd de la directiva ngFor.
+                    </small>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <hr>
+          <div class="container">
+            
+            <div class="row">
+
+              <div class="col-sm-12">
+                
+                <div class="card">
+                  <h4 class="card-header">NgFor - Uso de Tablas</h4>
+                  <div class="card-body">
+                    <h5 class="card-title"><small class="text-muted">
+                    Items del Objeto Tienda:</small></h5>
+
+                    <table class="table table-striped table-hover table-condensed">
+                      <thead>
+                        <tr>
+                          <th>Item</th>
+                          <th>Marca</th>
+                          <th>Cantidad (Uds)</th>
+                          <th>Precio (Eur)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr *ngFor="let item of ObjetoNgFor">
+                          <td>{{ item.item }}</td>
+                          <td>{{ item.marca }}</td>
+                          <td>{{ item.cantidad }}</td>
+                          <td>{{ item.precio }}</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                    
+                    <small> En este ejemplo mostramos una tabla segun el formato del Objeto y 
+                      sus elementos internos, y segun tengamos la necesidad podemos multiplicar la dificultad.
+                      Por ejemplo cambiar el CSS de de cierto elemento si tiene cierto valor.  </small>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
