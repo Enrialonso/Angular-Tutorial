@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ObjetoFor } from '../modelos/objeto.modelo';
+import { Objeto } from '../modelos/objeto.modelo';
 
 @Component({
   selector: 'app-data-binding-interpolacion-y-property-binding',

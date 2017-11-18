@@ -17,7 +17,12 @@ import { DirectivaAtributosNgstyleComponent } from './directiva-atributos-ngstyl
 import { FooterComponent } from './footer/footer.component';
 import { DirectivasEstructuralNgIfComponent } from './directivas-estructural-ng-if/directivas-estructural-ng-if.component';
 import { DirectivaEstructuraNgForComponent } from './directiva-estructura-ng-for/directiva-estructura-ng-for.component';
-import { DirectivaEstructuraNgSwitchComponent } from './directiva-estructura-ng-switch/directiva-estructura-ng-switch.component'
+import { DirectivaEstructuraNgSwitchComponent } from './directiva-estructura-ng-switch/directiva-estructura-ng-switch.component';
+import { DecoredoresInputOutputComponent } from './decoredores-input-output/decoredores-input-output.component';
+import { DecoradoresInoutPadrePAHComponent } from './decoradores-inout-padre-p-a-h/decoradores-inout-padre-p-a-h.component';
+import { DecoradoresInoutHijoPAHComponent } from './decoradores-inout-hijo-p-a-h/decoradores-inout-hijo-p-a-h.component';
+import { DecoradoresInoutHijoHAPComponent } from './decoradores-inout-hijo-h-a-p/decoradores-inout-hijo-h-a-p.component';
+import { DecoradoresInoutPadreHAPComponent } from './decoradores-inout-padre-h-a-p/decoradores-inout-padre-h-a-p.component'
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -32,6 +37,7 @@ const routes: Routes = [
   { path: 'directivas-Estructural-ngif', component: DirectivasEstructuralNgIfComponent  },
   { path: 'directivas-Estructural-ngfor', component: DirectivaEstructuraNgForComponent },
   { path: 'directivas-Estructural-ngswitch', component: DirectivaEstructuraNgSwitchComponent },
+  { path: 'decoradores-input-output', component: DecoredoresInputOutputComponent },
   { path: '**', component: Error404Component}
   ]
 
@@ -52,7 +58,12 @@ const routes: Routes = [
     FooterComponent,
     DirectivasEstructuralNgIfComponent,
     DirectivaEstructuraNgForComponent,
-    DirectivaEstructuraNgSwitchComponent
+    DirectivaEstructuraNgSwitchComponent,
+    DecoredoresInputOutputComponent,
+    DecoradoresInoutPadrePAHComponent,
+    DecoradoresInoutHijoPAHComponent,
+    DecoradoresInoutHijoHAPComponent,
+    DecoradoresInoutPadreHAPComponent
   ],
   imports: [
     BrowserModule,

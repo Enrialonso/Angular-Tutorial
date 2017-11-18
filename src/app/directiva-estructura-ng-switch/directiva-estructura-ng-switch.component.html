@@ -29,7 +29,7 @@
           <hr>
           <div class="container">
             <div class="row">
-              <div class="col-sm-4">
+              <div class="col-sm-6">
                 <div class="card">
                   <h4 class="card-header">NgSwitch - Listar Objeto</h4>
                   <div class="card-body">
@@ -48,7 +48,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-6">
                   <div class="card">
                       <h4 class="card-header">NgSwitch - Listar Objeto</h4>
                       <div class="card-body">
@@ -68,73 +68,9 @@
                       </div>
                     </div>
               </div>
-              <div class="col-sm-4">
-                <div class="card">
-                  <h4 class="card-header">NgFor - Uso Odd y Even</h4>
-                  <div class="card-body">
-                    <h5 class="card-title"><small class="text-muted">
-                    Items del Objeto Tienda:</small></h5>
-                    <ul>
-                      <li *ngFor="let item of ObjetoNgFor; let evenFor = even; let i = index">
-                        <Strong *ngIf="evenFor; else NormalData" style="color: rgb(80, 199, 247);">{{ i + 1 }} - Item: {{item.item}} </Strong>
-                        <ng-template #NormalData>
-                        <Strong>{{ i + 1 }} - Item: {{item.item}}</Strong>
-                        </ng-template>
-                      </li>
-                    </ul>
-                    <small>Aqui tambien listamos el objeto Tienda pero diferenciando los objetos impares
-                    que estan en Azul para que se distingan de los pares.
-                    Aplicando las varibles locales even y odd de la directiva ngFor.
-                    </small>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <hr>
-          <div class="container">
-            
-            <div class="row">
-
-              <div class="col-sm-12">
-                
-                <div class="card">
-                  <h4 class="card-header">NgFor - Uso de Tablas</h4>
-                  <div class="card-body">
-                    <h5 class="card-title"><small class="text-muted">
-                    Items del Objeto Tienda:</small></h5>
-
-                    <table class="table table-striped table-hover table-condensed">
-                      <thead>
-                        <tr>
-                          <th>Item</th>
-                          <th>Marca</th>
-                          <th>Cantidad (Uds)</th>
-                          <th>Precio (Eur)</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-
-                        <tr *ngFor="let item of ObjetoNgFor">
-                          <td>{{ item.item }}</td>
-                          <td>{{ item.marca }}</td>
-                          <td>{{ item.cantidad }}</td>
-                          <td>{{ item.precio }}</td>
-                        </tr>
-                        
-                      </tbody>
-                    </table>
-                    
-                    <small> En este ejemplo mostramos una tabla segun el formato del Objeto y 
-                      sus elementos internos, y segun tengamos la necesidad podemos multiplicar la dificultad.
-                      Por ejemplo cambiar el CSS de de cierto elemento si tiene cierto valor.  </small>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            
-          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="jumbotron">
+    <h2>Decoradores Input/Output</h2>
+    <h5><p>Estos decoradores tiene la funcion de pasar datos entre componentes en ambos sentidos
+      segun como se plantee la logica de los componentes que usan estos decoradores. 
+      </p>
+    <p>Se declaran mediante el empleo del decorador @input/Output. En los 
+      ejemplos sigientes pasaremos datos entre componentes y  los llamaremos 
+      para la ocacion componentes Padre e Hijo.</p></h5>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <h4 class="card-header">Unidireccional Padre a Hijo</h4>
+        <div class="card-body">
+
+          <app-decoradores-inout-padre-p-a-h></app-decoradores-inout-padre-p-a-h>
+
+            <hr>
+
+            <small class="card-text">Aqui lo que esta sucediendo es que entre los dos componentes se esta enviando 
+              informacion del componente "Padre" al "Hijo".
+            </small>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <h4 class="card-header">Unidireccional Hijo a Padre</h4>
+        <div class="card-body">
+          
+            <app-decoradores-inout-padre-h-a-p [textoINOUTPadreHAP]="textoINOUTHijoHAP"></app-decoradores-inout-padre-h-a-p>
+
+            <app-decoradores-inout-hijo-h-a-p></app-decoradores-inout-hijo-h-a-p>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <h4 class="card-header">Bidireccional Padre - Hijo</h4>
+        <div class="card-body">
+              <div class="card">
+                  <h4 class="card-header">Componente Padre</h4>
+                  <div class="card-body">
+                      <div class="card">
+                          <h4 class="card-header">Componente Hijo</h4>
+                          <div class="card-body">
+                            <p class="card-text"></p>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
